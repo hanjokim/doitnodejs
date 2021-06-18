@@ -10,11 +10,11 @@
 var output = '안녕 1!';
 var buffer1 = new Buffer(10);
 var len = buffer1.write(output, 'utf8');
-console.log('첫번째 버퍼의 문자열 : %s', buffer1.toString());
+console.log('첫번째 버퍼의 문자열 : %s', buffer1.toString(), len);
 
 // 버퍼 객체를 문자열을 이용해 만듭니다.
 var buffer2 = new Buffer('안녕 2!', 'utf8');
-console.log('두번째 버퍼의 문자열 : %s', buffer2.toString());
+console.log('두번째 버퍼의 문자열 : %s', buffer2.toString(), buffer2.length);
 
 // 타입을 확인합니다.
 console.log('버퍼 객체의 타입 : %s', Buffer.isBuffer(buffer1));
